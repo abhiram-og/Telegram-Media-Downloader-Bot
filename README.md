@@ -57,7 +57,6 @@ Media-downloader/
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
-├── Dockerfile
 └── README.md
 ```
 
