@@ -149,32 +149,12 @@ pytest tests/ -v
 
 ---
 
-## 🐳 Docker
-
-### Build
-
-```bash
-docker build -t telegram-media-bot .
-```
-
-### Run
-
-```bash
-docker run -d \
-  --name media-bot \
-  -p 8000:8000 \
-  --env-file .env \
-  telegram-media-bot
-```
-
----
-
 ## 🚢 Deployment Notes
 
 - Use a reverse proxy (Nginx, Caddy) with HTTPS in production
 - Set `WEBHOOK_URL` to your public HTTPS domain
 - Telegram requires HTTPS for webhooks
-- Consider using a process manager (systemd, supervisord) alongside Docker
+- Consider using a process manager (systemd, supervisord) in production
 - The bot uses Telegram's 50 MB upload limit — larger videos will be rejected gracefully
 
 ---
