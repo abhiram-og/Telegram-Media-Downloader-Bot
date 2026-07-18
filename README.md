@@ -1,5 +1,7 @@
 # 🎬 Telegram Media Downloader Bot
 
+🤖 **Live Bot:** [@VidExtractBot](https://t.me/VidExtractBot)
+
 A production-ready Telegram bot built with **FastAPI** that downloads videos from **X (Twitter)** posts and sends them back as Telegram video messages.
 
 Designed with Clean Architecture for easy extensibility to Instagram, YouTube, Reddit, and TikTok.
@@ -15,7 +17,6 @@ Designed with Clean Architecture for easy extensibility to Instagram, YouTube, R
 - **Automatic cleanup** — Temp files are deleted after upload and on startup
 - **Error handling** — User-friendly messages for all error cases
 - **Health check** — Built-in `/health` endpoint for monitoring
-- **Docker ready** — Production Dockerfile included
 
 ---
 
@@ -197,11 +198,3 @@ pytest tests/ -v
        self.register("twitter", TwitterDownloader())
        self.register("newplatform", NewPlatformDownloader())
    ```
-
-No other files need to change.
-
----
-
-## 📄 License
-
-MIT
