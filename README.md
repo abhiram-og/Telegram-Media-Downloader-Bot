@@ -50,11 +50,6 @@ Media-downloader/
 │       ├── validators.py        # URL validation & platform detection
 │       └── file_utils.py        # File system helpers
 │
-├── tests/
-│   ├── test_validators.py       # URL validator tests
-│   ├── test_factory.py          # Downloader factory tests
-│   └── test_download_service.py # Download service tests
-│
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
@@ -138,14 +133,6 @@ curl "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getWebhookInfo"
 ### 5. Test it
 
 Open your bot in Telegram and send a Twitter/X post URL!
-
----
-
-## 🧪 Running Tests
-
-```bash
-pytest tests/ -v
-```
 
 ---
 

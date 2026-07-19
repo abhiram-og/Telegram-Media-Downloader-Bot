@@ -96,32 +96,3 @@ class TelegramService:
             )
             raise
 
-    async def send_photo(
-        self,
-        chat_id: int,
-        photo_path: Path,
-        caption: str = "",
-    ) -> None:
-        """Send a photo file to a Telegram chat.
-
-        Args:
-            chat_id: The target chat ID.
-            photo_path: Path to the photo file.
-            caption: Optional caption text.
-
-        Raises:
-            TelegramError: If the Telegram API rejects the upload.
-        """
-        try:
-            with open(photo_path, "rb") as photo_file:
-                await self._bot.send_photo(
-                    chat_id=chat_id,
-                    photo=photo_file,
-                    caption=caption or None,
-                )
-            logger.info("Sent photo to chat %s", chat_id)
-        except TelegramError as exc:
-            logger.error(
-                "Failed to send photo to chat %s: %s", chat_id, exc
-            )
-            raise
